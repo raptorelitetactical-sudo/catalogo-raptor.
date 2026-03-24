@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Raptor Élite Tactical | Catálogo Móvil</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        :root {
+            --negro: #0a0a0a;
+            --gris-card: #141414;
+            --dorado: #d4af37;
+            --blanco: #ffffff;
+            --whatsapp: #25d366;
+        }
+
+        body {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            background-color: var(--negro);
+            color: var(--blanco);
+            margin: 0;
+            padding: 0;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        /* Encabezado Móvil */
+        header {
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.9)), url('https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?q=80&w=1000&auto=format&fit=crop');
+            background-size: cover;
+            background-position: center;
+            padding: 40px 20px;
+            text-align: center;
+            border-bottom: 2px solid var(--dorado);
+        }
+
+        header h1 {
+            font-size: 1.8rem;
+            letter-spacing: 3px;
+            margin: 0;
+            color: var(--dorado);
+            text-transform: uppercase;
+        }
+
+        header p {
+            font-size: 0.9rem;
+            opacity: 0.8;
+            margin-top: 10px;
+        }
+
+        /* Contenedor de Productos */
+        .container {
+            padding: 20px 15px;
+            display: grid;
+            grid-template-columns: 1fr; /* Una columna por defecto en móviles pequeños */
+            gap: 20px;
+        }
+
+        @media (min-width: 480px) {
+            .container {
+                grid-template-columns: 1fr 1fr; /* Dos columnas en móviles más grandes */
+            }
+        }
+
+        .card {
+            background-color: var(--gris-card);
+            border-radius: 12px;
+            overflow: hidden;
+            border: 1px solid #222;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card-img {
+            width: 100%;
+            aspect-ratio: 1 / 1;
+            object-fit: contain;
+            background-color: #fff; /* Fondo blanco para que tus fotos de catálogo resalten */
+            padding: 10px;
+            box-sizing: border-box;
+        }
+
+        .card-body {
+            padding: 15px;
+            text-align: center;
+            flex-grow: 1;
+        }
+
+        .card-body h3 {
+            font-size: 1.1rem;
+            margin: 0 0 8px 0;
+            color: var(--dorado);
+        }
+
+        .card-body p {
+            font-size: 0.85rem;
+            color: #bbb;
+            margin-bottom: 15px;
+        }
+
+        /* Botón de compra adaptado al pulgar */
+        .btn-buy {
+            display: block;
+            background-color: var(--whatsapp);
+            color: white;
+            text-decoration: none;
+            padding: 12px;
+            border-radius: 8px;
+            font-weight: bold;
+            font-size: 0.9rem;
+            transition: transform 0.2s;
+        }
+
+        .btn-buy:active {
+            transform: scale(0.95);
+        }
+
+        /* Botón Flotante de WhatsApp */
+        .float-wa {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: var(--whatsapp);
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-size: 30px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.4);
+            z-index: 100;
+        }
+
+        footer {
+            padding: 40px 20px 100px 20px;
+            text-align: center;
+            background-color: #050505;
+            font-size: 0.8rem;
+        }
+
+        .insta-link {
+            color: var(--dorado);
+            text-decoration: none;
+            font-size: 1.2rem;
+            display: block;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>RAPTOR ÉLITE</h1>
+    <p>Equipamiento táctico profesional</p>
+</header>
+
+<div class="container">
+    <div class="card">
+        <img src="https://i.imgur.com/GzV4N2Y.jpg" class="card-img" alt="Lentes Tácticos">
+        <div class="card-body">
+            <h3>Lentes Tácticos SWAT</h3>
+            <p>Con 3 visores y estuche rígido.</p>
+            <a href="https://w.app/2svtow" class="btn-buy">Pedir por WhatsApp</a>
+        </div>
+    </div>
+
+    <div class="card">
+        <img src="https://i.imgur.com/L2f7J7r.jpg" class="card-img" alt="Botas">
+        <div class="card-body">
+            <h3>Botas Raptor SWAT</h3>
+            <p>Suela de alta tracción y durabilidad.</p>
+            <a href="https://w.app/2svtow" class="btn-buy">Pedir por WhatsApp</a>
+        </div>
+    </div>
+
+    <div class="card">
+        <img src="https://i.imgur.com/8Q8pY7L.jpg" class="card-img" alt="Guantes">
+        <div class="card-body">
+            <h3>Guantes de Medio Dedo</h3>
+            <p>Protección reforzada en nudillos.</p>
+            <a href="https://w.app/2svtow" class="btn-buy">Pedir por WhatsApp</a>
+        </div>
+    </div>
+
+    <div class="card">
+        <img src="https://i.imgur.com/9mD7fK5.jpg" class="card-img" alt="Accesorios">
+        <div class="card-body">
+            <h3>Porta Cargador 9mm</h3>
+            <p>Polímero de alta resistencia universal.</p>
+            <a href="https://w.app/2svtow" class="btn-buy">Pedir por WhatsApp</a>
+        </div>
+    </div>
+</div>
+
+<a href="https://w.app/2svtow" class="float-wa">
+    <i class="fab fa-whatsapp"></i>
+</a>
+
+<footer>
+    <a href="https://www.instagram.com/raptorelitetactical" class="insta-link">
+        <i class="fab fa-instagram"></i> @raptorelitetactical
+    </a>
+    <p>© 2026 Raptor Élite Tactical<br>Valencia, Venezuela</p>
+</footer>
+
+</body>
+</html>
