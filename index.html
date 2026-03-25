@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="es" class="h-full">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Raptor Élite Tactical | Valencia</title>
+  <script src="https://cdn.tailwindcss.com/3.4.17"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lucide@0.263.0/dist/umd/lucide.min.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&family=Oswald:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    html, body { height: 100%; margin: 0; scroll-behavior: smooth; }
+    body { font-family: 'Rajdhani', sans-serif; background-color: #0a0a0a; color: #e5e7eb; }
+    .neon-glow { text-shadow: 0 0 10px rgba(57,255,20,0.5), 0 0 30px rgba(57,255,20,0.2); }
+    .neon-border { box-shadow: 0 0 8px rgba(57,255,20,0.3); }
+    .btn-pulse { animation: pulse-neon 2s ease-in-out infinite; }
+    @keyframes pulse-neon {
+      0%, 100% { box-shadow: 0 0 5px rgba(57,255,20,0.4); }
+      50% { box-shadow: 0 0 20px rgba(57,255,20,0.7); }
+    }
+    .card-hover { transition: transform 0.3s, box-shadow 0.3s; background: #1a1a1a; }
+    .card-hover:hover { transform: translateY(-4px); border-color: #39ff14; }
+    .product-img-bg { background: linear-gradient(135deg, #1a1a1a 0%, #2a2a2a 100%); }
+  </style>
+ </head>
+ <body class="h-full">
+  <div id="app-wrapper" class="w-full min-h-full relative">
+   
+   <nav class="sticky top-0 z-50 bg-black/90 backdrop-blur border-b border-neon/20">
+    <div class="max-w-lg mx-auto flex items-center justify-between px-4 py-3">
+      <div class="flex items-center gap-2">
+        <span class="font-bold text-lg tracking-wider text-[#39ff14] neon-glow" style="font-family:'Oswald',sans-serif;">RAPTOR ÉLITE</span>
+      </div>
+      <i data-lucide="menu" class="text-gray-400 w-6 h-6"></i>
+    </div>
+   </nav>
+
+   <main class="max-w-lg mx-auto">
+    <section class="px-4 pt-10 pb-12 text-center">
+     <div class="inline-flex items-center gap-2 bg-[#39ff14]/10 border border-[#39ff14]/30 rounded-full px-4 py-1 mb-5">
+       <span class="w-2 h-2 rounded-full bg-[#39ff14] animate-pulse"></span>
+       <span class="text-xs tracking-widest text-[#39ff14] uppercase">Equipamiento Profesional</span>
+     </div>
+     <h1 class="text-4xl font-bold tracking-tight leading-tight mb-3 text-white" style="font-family:'Oswald',sans-serif;">RAPTOR ÉLITE<br><span class="text-[#39ff14] neon-glow">TACTICAL</span></h1>
+     <p class="text-gray-400 text-lg mb-6">Equipamiento de élite para operadores exigentes en Valencia.</p>
+     <a href="#catalogo" class="inline-flex items-center gap-2 bg-[#39ff14] text-black font-bold px-8 py-4 rounded btn-pulse" style="font-family:'Oswald',sans-serif;">
+       VER CATÁLOGO TÁCTICO
+     </a>
+    </section>
+
+    <section id="catalogo" class="px-4 pb-16">
+     <div class="flex items-center gap-3 mb-8">
+      <div class="w-1 h-8 bg-[#39ff14] rounded-full"></div>
+      <h2 class="text-2xl font-bold tracking-wider text-white" style="font-family:'Oswald',sans-serif;">PRODUCTOS DISPONIBLES</h2>
+     </div>
+     
+     <div id="grid-productos" class="grid grid-cols-1 gap-6">
+       </div>
+    </section>
+
+    <section id="contacto" class="px-4 pb-16">
+     <div class="bg-[#1a1a1a] border border-[#39ff14]/20 rounded-xl p-6 neon-border">
+      <h3 class="text-[#39ff14] font-bold mb-4 text-xl" style="font-family:'Oswald',sans-serif;">UBICACIÓN Y CONTACTO</h3>
+      <div class="flex flex-col gap-4 text-gray-300">
+       <div class="flex items-center gap-3"><i data-lucide="map-pin" class="text-[#39ff14] w-5 h-5"></i> <span>Valencia, Carabobo, Venezuela</span></div>
+       <div class="flex items-center gap-3"><i data-lucide="instagram" class="text-[#39ff14] w-5 h-5"></i> <span>@raptorelitetactical</span></div>
+       <a href="https://w.app/2svtow" class="flex items-center gap-3 text-[#39ff14] font-bold underline"><i data-lucide="message-circle" class="w-5 h-5"></i> Escríbenos al WhatsApp</a>
+      </div>
+     </div>
+    </section>
+   </main>
+
+   <footer class="py-8 text-center border-t border-white/5">
+    <p class="text-xs text-gray-600 tracking-widest uppercase">© 2026 Raptor Élite Tactical — Valencia</p>
+   </footer>
+  </div>
+
+  <script>
+    const products = [
+      { id: 1, name: "Lentes Tácticos SWAT", cat: "Óptica", icon: "eye" },
+      { id: 2, name: "Guantes Op. Especiales", cat: "Protección", icon: "hand" },
+      { id: 3, name: "Funda Gunflower Crystal", cat: "Porte", icon: "shield" },
+      { id: 4, name: "Funda de Polímero Negra", cat: "Porte", icon: "shield-alert" },
+      { id: 5, name: "Bota Raptor SWAT", cat: "Calzado", icon: "footprints" },
+      { id: 6, name: "Reloj de Supervivencia", cat: "Watch", icon: "watch" },
+      { id: 7, name: "Cuchillo Plegable Élite", cat: "Herramientas", icon: "sword" },
+      { id: 8, name: "Porta Celular Táctico", cat: "Accesorios", icon: "smartphone" },
+      { id: 9, name: "Linterna Táctica", cat: "Iluminación", icon: "flashlight" },
+      { id: 10, name: "Correa Táctica SWAT", cat: "Accesorios", icon: "link" }
+    ];
+
+    const grid = document.getElementById('grid-productos');
+    const wsLink = "https://w.app/2svtow";
+
+    products.forEach(p => {
+      const card = document.createElement('div');
+      card.className = 'card-hover border border-white/5 rounded-xl overflow-hidden';
+      card.innerHTML = `
+        <div class="product-img-bg h-48 flex items-center justify-center relative">
+          <i data-lucide="${p.icon}" class="w-16 h-16 text-[#39ff14]/70"></i>
+          <span class="absolute top-3 left-3 bg-black/60 text-[10px] text-[#39ff14] px-2 py-1 rounded border border-[#39ff14]/30">${p.cat}</span>
+        </div>
+        <div class="p-5">
+          <h3 class="font-bold text-white text-lg mb-4" style="font-family:'Oswald',sans-serif;">${p.name}</h3>
+          <a href="${wsLink}" class="w-full bg-[#39ff14] text-black py-3 rounded font-bold flex items-center justify-center gap-2 hover:bg-[#2ecc10] transition-colors">
+            <i data-lucide="message-square" class="w-4 h-4"></i>
+            CONSULTAR PRECIO
+          </a>
+        </div>
+      `;
+      grid.appendChild(card);
+    });
+
+    lucide.createIcons();
+  </script>
+ </body>
+</html>
